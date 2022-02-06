@@ -1,8 +1,30 @@
 <app-header></app-header>
-<h2>Single Responsibility:</h2>
-<p>A class shuould have one, and only one, reason to change</p>
+<div>
+  <ul>
+    <li>
+      <h2>Single Responsibility:</h2>
+      <p>A class shuould have one, and only one, reason to change</p>
+    </li>
+    <li>
+      <h2>Open / Close:</h2>
+      <p>
+        Sofware entities should be open for extension, but closed for
+        modification
+      </p>
+    </li>
+  </ul>
+</div>
+
 <div class="content">
-  <app-widget></app-widget>
+  <app-widget>
+    <app-widget-only-context></app-widget-only-context>
+  </app-widget>
+  <app-widget>
+    <app-widget-text-image></app-widget-text-image>
+  </app-widget>
+  <app-widget>
+    <p>comming soon...</p>
+  </app-widget>
 </div>
 
 <router-outlet></router-outlet>

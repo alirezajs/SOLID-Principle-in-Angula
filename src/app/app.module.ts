@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { WidgetComponent } from './widget/widget.component';
 import { HeaderComponent } from './header/header.component';
 import { WidgetOnlyContextComponent } from './widget/widget-only-context/widget-only-context.component';
+import { WidgetTextImageComponent } from './widget/widget-text-image/widget-text-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WidgetComponent,
     HeaderComponent,
-    WidgetOnlyContextComponent
+    WidgetOnlyContextComponent,
+    WidgetTextImageComponent
   ],
   imports: [
     BrowserModule,
