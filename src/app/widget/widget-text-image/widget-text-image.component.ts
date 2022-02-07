@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { RELOADABLE_CONTENT } from '../widget-content-token';
 import { Reloadable, WidgetInterface } from '../widget-interface';
 
 @Component({
   selector: 'app-widget-text-image',
   templateUrl: './widget-text-image.component.html',
-  styleUrls: ['./widget-text-image.component.scss']
+  styleUrls: ['./widget-text-image.component.scss'],
+  providers: [
+    { provide: RELOADABLE_CONTENT, useExisting: WidgetTextImageComponent }
+  ]
 })
 export class WidgetTextImageComponent implements WidgetInterface, Reloadable {
 
@@ -12,9 +16,6 @@ export class WidgetTextImageComponent implements WidgetInterface, Reloadable {
   reloading: boolean = false;
   constructor() { }
   reload(): void {
-    throw new Error('Method not implemented.');
+    console.log('...reloading is happening')
   }
-
-
-
 }
